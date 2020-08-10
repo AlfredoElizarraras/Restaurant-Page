@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "> This app keeps shows a restaurant page. It's purpose is to showcase what I have learned about DOM manipulation in the Microverse course curriculum.",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlfredoElizarraras/Restaurant-Page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlfredoElizarraras/Restaurant-Page/issues"
+  },
+  "homepage": "https://github.com/AlfredoElizarraras/Restaurant-Page#readme",
+  "devDependencies": {
+    "css-loader": "^4.2.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
