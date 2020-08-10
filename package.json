@@ -4,7 +4,8 @@
   "description": "> This app keeps shows a restaurant page. It's purpose is to showcase what I have learned about DOM manipulation in the Microverse course curriculum.",
   "private": true,
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
