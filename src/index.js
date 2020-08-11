@@ -1,8 +1,3 @@
-const navBar = (() => {
-  const hello = 'Hello World.';
-  return {
-    hello,
-  };
-})();
+import NavBarComponent from './navbar/navbarComponent';
 
-export default navBar;
+let nav = new NavBarComponent('body');
