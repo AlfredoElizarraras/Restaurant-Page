@@ -3,9 +3,9 @@ import "./navBarStyles.css";
 const NavBarComponent = (() => {
   const createTabMarkUp = (caption) => {
     let captionId = caption.toLowerCase().replace(" ", "-");
-    return `<div id="${captionId}-id" class="navbar__tab-item">
-    <a href="#${captionId}-section">${caption}</a>
-    </div>`;
+    return `<button id="${captionId}-id" class="navbar__tab-item">
+    ${caption}
+    </button>`;
   };
 
   const validObjectHelper = (object) => {
@@ -49,21 +49,31 @@ const NavBarComponent = (() => {
 
   const createNavBar = () => {
     let navbar = document.createElement("nav");
-    navbar.id = 'nav'
+    navbar.id = "nav";
     navbar.classList.add("navbar");
     return navbar;
   };
 
-  const addNavSectionsToNavBar = () => {
+  const addNavSectionsToNavBar = (nav, navSection) => {
+    if (validObjectHelper(nav) && validObjectHelper(navSection))
+      return undefined;
 
+    nav.appendChild(navSection);
+    return nav;
   };
 
   const renderNavBar = (parent, tabsLinksCaption) => {
-    const navbar = createNavBar();
-    const navSection = createNavSection();
-    const tabsLinks = createTabLinks(tabsLinksCaption);
-
-    document.getElementById(parent).appendChild(addTabLinksToNavSection(navSection, tabsLinks));
+    document
+      .getElementById(parent)
+      .appendChild(
+        addNavSectionsToNavBar(
+          createNavBar(),
+          addTabLinksToNavSection(
+            createNavSection(),
+            createTabLinks(tabsLinksCaption)
+          )
+        )
+      );
   };
 
   return {

@@ -1,26 +1,31 @@
-.jc-center {
-  justify-content: center;
-}
-
-.jc-between {
-  justify-content: space-between;
-}
-
-.jc-around {
-  justify-content: space-around;
-}
-
 .navbar {
   display: flex;
-  justify-content: space-between;
-  margin: 2rem 0.850rem 0 0.985rem;
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+  width: 100%;
+  background-color: #75a7ff;
 }
 
 .navbar__tab-container {
   display: flex;
-  margin: 0 1.5rem;
+  margin: 0;
 }
 
 .navbar__tab-item {
-  margin: 0 3rem;
+  margin: 0;
+  border: none;
+  background-color: #75a7ff;
+  font-size: 1.2rem;
+}
+
+.navbar__tab-item:focus {
+  background-color: #004ecb;
+  color: #fff;
+}
+
+.navbar__tab-item:hover {
+  background-color: #2979ff;
+  color: #000;
+  font-size:  1.4rem;
 }
