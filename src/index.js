@@ -1,9 +1,9 @@
 import NavBarComponent from './navbar/navbarComponent';
-import '../src/indexStyles.css';
+import './indexStyles.css';
 
 
-window.onload = function(){
+window.onload = () => {
   document.getElementById('content').classList.add('content');
-  const navLinksCaption = ['about us', 'Menu', 'Gallery' ];
+  const navLinksCaption = ['about us', 'Menu', 'Gallery'];
   NavBarComponent.renderNavBar('content', navLinksCaption);
- }
+};
