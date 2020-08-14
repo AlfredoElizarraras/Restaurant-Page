@@ -4,7 +4,7 @@ const NavBarComponent = (() => {
   const tabButtons = [];
 
   const createTabMarkUp = (caption) => {
-    const captionId = `${caption.toLowerCase().replace(' ', '-')}-id`;
+    const captionId = `btn-${caption.toLowerCase().replace(' ', '-')}`;
     tabButtons.push(captionId);
     return `<button id="${captionId}" class="navbar__tab-item">
     ${caption}

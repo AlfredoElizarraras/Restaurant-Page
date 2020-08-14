@@ -2,7 +2,7 @@ import './aboutUsStyles.css';
 
 const AboutUsPage = (() => {
   const createAboutUsPageMarkUp = () => `
-    <div id="about-us-id" class="about-us">
+    <div id="aboutUs" class="about-us">
     <article class="about-us__page">
       <img id="about-us-image" src="../src/images/about-us.jpg"/>
       
