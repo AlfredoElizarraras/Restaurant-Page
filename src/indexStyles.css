@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -18,19 +24,22 @@ html, body {
 .page {
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 0.5px solid lightgray;
-  border-radius: 5%;
+  justify-content: start;
+  height: 100%;
+  padding: 1.5rem;
 }
 
 .card__title {
-  font-size: 4rem;
+  font-size: 2.5rem;
+}
+
+#about-us-image {
+  width: 100%;
+  height: 250px;
 }

@@ -1,11 +1,13 @@
 .navbar {
   display: flex;
   justify-content: end;
-  height: 3rem;
+  align-items: center;
+  height: 5rem;
   width: 100%;
   background-color: #c43c00;
   color: #fff;
-  padding: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .navbar__tab-container {
@@ -16,10 +18,9 @@
 .navbar__tab-item {
   border: none;
   font-size: 0.898rem;
-  line-height: 0.898rem;
   margin-right: 1.5rem;
   background-color: #c43c00;
-  color: #ffffda;
+  color: #ff9e40;
   text-transform: uppercase;
 }
 
