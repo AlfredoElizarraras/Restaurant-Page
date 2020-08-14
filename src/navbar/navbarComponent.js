@@ -61,7 +61,8 @@ const NavBarComponent = (() => {
     return nav;
   };
 
-  const renderNavBar = (parent, tabsLinksCaption) => {
+  const renderNavBar = (parent) => {
+    const tabsLinksCaption = ['home', 'about us', 'Menu'];
     document
       .getElementById(parent)
       .appendChild(

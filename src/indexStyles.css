@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -14,44 +15,7 @@ html, body {
 .content {
   width: 100%;
   height: 100%;
-  /* only for testing  */
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: start;
-  /* only for testing  */
-}
-
-.page {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-}
-
-.card {
-  display: flex;
-  color: #000000;
-  background-color: #ff6d00;
-  width: 90%;
-  height: 80%;
-  border-top-right-radius: 5em;
-  border-bottom-right-radius: 5em;
-}
-
-.card__info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 3rem;
-}
-
-.card__title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-#about-us-image {
-  width: 40%;
-  height: 100%;
+  justify-content: start;
 }

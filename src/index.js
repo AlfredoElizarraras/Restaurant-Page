@@ -1,9 +1,10 @@
 import NavBarComponent from './navbar/navbarComponent';
+import AboutUsPage from './about-us/aboutUs';
 import './indexStyles.css';
 
 
 window.onload = () => {
   document.getElementById('content').classList.add('content');
-  const navLinksCaption = ['home', 'about us', 'Menu', 'Reviews'];
-  NavBarComponent.renderNavBar('content', navLinksCaption);
+  NavBarComponent.renderNavBar('content');
+  AboutUsPage.renderAboutUsPage('content');
 };
