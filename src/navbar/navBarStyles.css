@@ -3,7 +3,9 @@
   justify-content: end;
   height: 3rem;
   width: 100%;
-  background-color: #75a7ff;
+  background-color: #c43c00;
+  color: #fff;
+  padding: 1.5rem;
 }
 
 .navbar__tab-container {
@@ -13,17 +15,15 @@
 
 .navbar__tab-item {
   border: none;
-  background-color: #75a7ff;
-  font-size: 1.2rem;
-}
-
-.navbar__tab-item:focus {
-  background-color: #004ecb;
-  color: #fff;
+  font-size: 0.898rem;
+  line-height: 0.898rem;
+  margin-right: 1.5rem;
+  background-color: #c43c00;
+  color: #ffffda;
+  text-transform: uppercase;
 }
 
 .navbar__tab-item:hover {
-  background-color: #2979ff;
-  color: #000;
-  font-size:  1.4rem;
+  border-bottom: 1px solid #ff6d00;
+  color: #fff;
 }
