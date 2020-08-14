@@ -19,8 +19,9 @@
   border: none;
   font-size: 0.898rem;
   margin-right: 1.5rem;
+  height: 3rem;
   background-color: #c43c00;
-  color: #ff9e40;
+  color: #000;
   text-transform: uppercase;
 }
 
