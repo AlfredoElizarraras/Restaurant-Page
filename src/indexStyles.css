@@ -8,4 +8,29 @@ html, body {
 .content {
   width: 100%;
   height: 100%;
+  /* only for testing  */
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: start;
+  /* only for testing  */
+}
+
+.page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid lightgray;
+  border-radius: 5%;
+}
+
+.card__title {
+  font-size: 4rem;
 }
