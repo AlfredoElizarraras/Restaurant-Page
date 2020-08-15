@@ -23,3 +23,43 @@ body {
 .d-none {
   display: none;
 }
+
+.home {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__image {
+  background-image: url('../src/images/home.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -6;
+}
+
+.home__title {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.home__button {
+  border: none;
+  font-size: 0.895rem;
+  background-color: #ff6d00;
+  padding: 1rem;
+  border-radius: 5em;
+  color: #000000;
+}
+
+.home__button:hover {
+ cursor: pointer;
+ background-color: #ff9e40;
+}
