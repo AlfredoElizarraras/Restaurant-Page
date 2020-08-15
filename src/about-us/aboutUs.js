@@ -1,8 +1,8 @@
-import './aboutUsStyles.css';
+import "./aboutUsStyles.css";
 
 const AboutUsPage = (() => {
   const createAboutUsPageMarkUp = () => `
-    <div id="aboutUs" class="about-us">
+    <div id="aboutUs" class="about-us d-none">
     <article class="about-us__page">
       <img id="about-us-image" src="../src/images/about-us.jpg"/>
       

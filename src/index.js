@@ -1,7 +1,7 @@
 import NavBarComponent from "./navbar/navbarComponent";
 import AboutUsPage from "./about-us/aboutUs";
+import HomePage from "./home/home"
 import "./indexStyles.css";
-import Icon from './images/home.jpg'
 
 
 const showPage = (pageId) =>
@@ -11,8 +11,11 @@ window.onload = () => {
   document.getElementById("content").classList.add("content");
   NavBarComponent.renderNavBar("content");
   AboutUsPage.renderAboutUsPage("content");
-  document.getElementById("aboutUs").classList.add("d-none");
+  HomePage.renderHomePage("content");
   document.getElementById("btn-about-us").addEventListener("click", () => {
     showPage("aboutUs");
+  });
+  document.getElementById("btn-home").addEventListener("click", () => {
+    showPage("homeId");
   });
 };
