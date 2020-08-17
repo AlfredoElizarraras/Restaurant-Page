@@ -1,10 +1,10 @@
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: "./src/index.js",
-  output: {
-    filename: "main.js",
-    path: path.join(__dirname, "dist"),
+  entry: {
+    app: "./src/index.js",
   },
   module: {
     rules: [
@@ -23,5 +23,15 @@ module.exports = {
       },
     ],
   },
-  mode: 'development',
+  mode: "development",
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: "Restaurant page",
+    }),
+  ],
+  output: {
+    filename: "[name].main.js",
+    path: path.join(__dirname, "dist"),
+  },
 };

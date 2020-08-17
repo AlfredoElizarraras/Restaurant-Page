@@ -6,7 +6,10 @@ import EventModule from './events/eventModule';
 import './indexStyles.css';
 
 window.onload = () => {
-  document.getElementById('content').classList.add('content');
+  const mainDiv = document.createElement('div');
+  mainDiv.id = 'content';
+  mainDiv.classList.add('content');
+  document.querySelector('body').appendChild(mainDiv);
   NavBarComponent.renderNavBar('content');
   AboutUsPage.renderAboutUsPage('content');
   HomePage.renderHomePage('content');
