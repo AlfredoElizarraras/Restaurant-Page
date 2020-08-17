@@ -1,4 +1,4 @@
-import "./homeStyles.css";
+import './homeStyles.css';
 
 const HomePage = (() => {
   const createHomePageMarkUp = () => `
@@ -17,7 +17,7 @@ const HomePage = (() => {
 
   return {
     renderHomePage,
-  }
+  };
 })();
 
 export default HomePage;
