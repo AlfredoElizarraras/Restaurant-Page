@@ -21,5 +21,10 @@ body {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
 }

@@ -1,8 +1,8 @@
-import "./menuStyles.css";
+import './menuStyles.css';
 
 const MenuPage = (() => {
   const createMenuPageMarkUp = () => `
-  <div id="menuId" class="menu-container d-none">
+  <div id="menuId" class="menu-container page d-none">
   <article id="menuCard1" class="menu__card">
     <img
       id="menuCardImage1"
@@ -101,8 +101,7 @@ const MenuPage = (() => {
 </div>
 
 
-  <div id="modalDishInfo" class="modal">
-  <!-- Modal content -->
+  <div id="modalDishInfo" class="modal d-none">
   <div class="modal-content">
     <div class="modal-header">
       <span id="btn-close" class="close">&times;</span>
@@ -125,8 +124,8 @@ const MenuPage = (() => {
     document.getElementById(parent).innerHTML += createMenuPageMarkUp();
   };
 
-  return { 
-    renderMenuPage 
+  return {
+    renderMenuPage,
   };
 })();
 
