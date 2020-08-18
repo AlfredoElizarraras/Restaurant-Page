@@ -31,11 +31,11 @@
   background-color: #ff6d00;
   padding: 1rem;
   border-radius: 5em;
-  color: #000000;
+  color: #000;
 }
 
 .home__button:hover {
- cursor: pointer;
+  cursor: pointer;
 }
 
 .home__button:active {
