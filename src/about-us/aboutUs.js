@@ -1,10 +1,11 @@
 import './aboutUsStyles.css';
+import aboutUsImage from '../images/about-us.jpg';
 
 const AboutUsPage = (() => {
   const createAboutUsPageMarkUp = () => `
     <div id="aboutUsId" class="about-us page d-none">
     <article class="about-us__page">
-      <img id="about-us-image" src="../src/images/about-us.jpg"/>
+      <img id="about-us-image"/>
       
       <div class="about-us__info">
         <h2 class="about-us__title">About us</h2>
@@ -14,8 +15,13 @@ const AboutUsPage = (() => {
   </div>
     `;
 
+  const addImage = () => {
+    document.getElementById('about-us-image').src = aboutUsImage;
+  };
+
   const renderAboutUsPage = (parent) => {
     document.getElementById(parent).innerHTML += createAboutUsPageMarkUp();
+    addImage();
   };
 
   return {

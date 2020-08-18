@@ -1,4 +1,8 @@
 import './menuStyles.css';
+import dish_1 from'../images/dish_1.jpg';
+import dish_2 from'../images/dish_2.jpg';
+import dish_3 from'../images/dish_3.jpg';
+import dish_4 from'../images/dish_4.jpg';
 
 const MenuPage = (() => {
   const createMenuPageMarkUp = () => `
@@ -7,7 +11,6 @@ const MenuPage = (() => {
     <img
       id="menuCardImage1"
       class="menu__card-image"
-      src="../src/images/dish_1.jpg"
     />
 
     <div class="menu__card-info">
@@ -30,7 +33,6 @@ const MenuPage = (() => {
     <img
       id="menuCardImage2"
       class="menu__card-image"
-      src="../src/images/dish_2.jpg"
     />
 
     <div class="menu__card-info">
@@ -53,7 +55,6 @@ const MenuPage = (() => {
     <img
       id="menuCardImage3"
       class="menu__card-image"
-      src="../src/images/dish_3.jpg"
     />
 
     <div class="menu__card-info">
@@ -80,7 +81,6 @@ const MenuPage = (() => {
   <img
     id="menuCardImage4"
     class="menu__card-image"
-    src="../src/images/dish_4.jpg"
   />
 
   <div class="menu__card-info">
@@ -120,8 +120,16 @@ const MenuPage = (() => {
 </div>
   `;
 
+  const addImages = () => {
+    document.getElementById('menuCardImage1').src = dish_1;
+    document.getElementById('menuCardImage2').src = dish_2;
+    document.getElementById('menuCardImage3').src = dish_3;
+    document.getElementById('menuCardImage4').src = dish_4;
+  };
+
   const renderMenuPage = (parent) => {
     document.getElementById(parent).innerHTML += createMenuPageMarkUp();
+    addImages();
   };
 
   return {

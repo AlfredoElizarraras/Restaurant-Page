@@ -1,2 +1,5 @@
 /node_modules
 /package-lock.json
+.firebaserc
+firebase.json
+.firebase/hosting.ZGlzdA.cache

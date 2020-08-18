@@ -23,6 +23,7 @@
   background-color: #c43c00;
   color: #cfd8dc;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .navbar__tab-item:hover {
