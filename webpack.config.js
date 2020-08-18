@@ -1,6 +1,6 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // eslint-disable-line import/extensions
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // eslint-disable-line import/extensions
 
 module.exports = {
   entry: {
