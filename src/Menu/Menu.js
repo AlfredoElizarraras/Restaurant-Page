@@ -1,8 +1,8 @@
 import './menuStyles.css';
-import dish_1 from'../images/dish_1.jpg';
-import dish_2 from'../images/dish_2.jpg';
-import dish_3 from'../images/dish_3.jpg';
-import dish_4 from'../images/dish_4.jpg';
+import dish1 from '../images/dish_1.jpg';
+import dish2 from '../images/dish_2.jpg';
+import dish3 from '../images/dish_3.jpg';
+import dish4 from '../images/dish_4.jpg';
 
 const MenuPage = (() => {
   const createMenuPageMarkUp = () => `
@@ -121,10 +121,10 @@ const MenuPage = (() => {
   `;
 
   const addImages = () => {
-    document.getElementById('menuCardImage1').src = dish_1;
-    document.getElementById('menuCardImage2').src = dish_2;
-    document.getElementById('menuCardImage3').src = dish_3;
-    document.getElementById('menuCardImage4').src = dish_4;
+    document.getElementById('menuCardImage1').src = dish1;
+    document.getElementById('menuCardImage2').src = dish2;
+    document.getElementById('menuCardImage3').src = dish3;
+    document.getElementById('menuCardImage4').src = dish4;
   };
 
   const renderMenuPage = (parent) => {
