@@ -1,24 +1,44 @@
 import './homeStyles.css';
-import homeImage from '../images/home.jpg';
+import homeImageSrc from '../images/home.jpg';
 
 const HomePage = (() => {
-  const createHomePageMarkUp = () => `
-  <div id="homeId" class="home page">
-  <img id="homeImage" class="home__image"/>
-  <div class="home__info">
-    <h2 class="home__title">Restaurant Page</h2>
-    <button id="btn-home-menu" class="home__button">START EATING</button>
-  </div>
-</div>
-  `;
+  const createHomePageElement = () => {
+    // create returning element and child elements
+    const homeIdContainer = document.createElement('div');
+    const homeImage = document.createElement('img');
+    const homeInfo = document.createElement('div');
+    const homeTitle = document.createElement('h1');
+    const homeButtonForMenu = document.createElement('button');
 
-  const addImage = () => {
-    document.getElementById('homeImage').src = homeImage;
+    // assign id's
+    homeIdContainer.id = 'homeId';
+    homeImage.id = 'homeImage';
+    homeButtonForMenu.id = 'btn-home-menu';
+
+    // assign classes
+    homeIdContainer.classList.add('home');
+    homeIdContainer.classList.add('page');
+    homeImage.classList.add('home__image');
+    homeInfo.classList.add('home__info');
+    homeTitle.classList.add('home__title');
+    homeButtonForMenu.classList.add('home__button');
+
+    // assign values
+    homeTitle.innerHTML = 'Restaurant Page';
+    homeButtonForMenu.innerHTML = 'START EATING';
+    homeImage.src = homeImageSrc;
+
+    // append elements to containers
+    homeInfo.append(homeTitle);
+    homeInfo.append(homeButtonForMenu);
+    homeIdContainer.append(homeInfo);
+    homeIdContainer.append(homeImage);
+
+    return homeIdContainer;
   };
 
   const renderHomePage = (parent) => {
-    document.getElementById(parent).innerHTML += createHomePageMarkUp();
-    addImage();
+    document.getElementById(parent).appendChild(createHomePageElement());
   };
 
   return {
