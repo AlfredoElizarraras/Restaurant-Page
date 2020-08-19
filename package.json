@@ -1,0 +1,43 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "> This app keeps shows a restaurant page. It's purpose is to showcase what I have learned about DOM manipulation in the Microverse course curriculum.",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "go": "webpack-dev-server --host 0.0.0.0 --port 8080",
+    "stylelint": "npx stylelint ./src/css/*.css",
+    "eslint": "npx eslint ./src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlfredoElizarraras/Restaurant-Page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlfredoElizarraras/Restaurant-Page/issues"
+  },
+  "homepage": "https://github.com/AlfredoElizarraras/Restaurant-Page#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.8.0",
+    "stylelint-scss": "^3.17.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

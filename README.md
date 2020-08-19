@@ -1,14 +1,9 @@
-# Restaurant Page
+<h1 align="center">
+ :hamburger: Restaurant page :apple:
+</h1>
 
 > This app keeps shows a restaurant page. It's purpose is to showcase what I have learned about DOM manipulation in the Microverse course curriculum.
 
-## Screen shots
-
-<!-- ![Login](/assets/images/login.jpeg?raw=true "Login") -->
-
-
-## Project management
-I used github [project management]() to manage apps deadlines and due dates.
 
 ## Built With
 
@@ -18,7 +13,7 @@ I used github [project management]() to manage apps deadlines and due dates.
 
 ## Live Demo
 
-[Restaurant Page]()
+[Restaurant Page](https://restaurant-page-2402c.web.app/)
 
 ### Prerequisites
 
@@ -35,13 +30,9 @@ To get a local copy up and running follow these simple example steps
   git clone https://github.com/AlfredoElizarraras/Restaurant-Page.git
   ```
 - Change directory to Restaurant-Page folder.
+- npm install
 
-
-### Deployment
-
-Coming soon
-
-## Authors
+## Author
 
 👤 **Oscar Alfredo Gómez Elizarrarás**
 
@@ -59,7 +50,20 @@ Give a ⭐️ if you like this project!
 
 - [Microverse](https://microverse.org)
 - [Odin project](https://www.theodinproject.com/)v13.14.0
+- [Emy: Home page image](https://unsplash.com/@grimnoire?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- [Jason Leung: About us page image](https://unsplash.com/@ninjason?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- [Thanos Pal: Menu page dish 1](https://unsplash.com/@thanospal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- [Joseph Gonzales: Menu page dish 2](https://unsplash.com/@miracletwentyone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- [Rungnapa Sifoo: Menu page dish 3](https://unsplash.com/@sifoo84?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- [Brandi Ibrao: Menu page dish 4](https://unsplash.com/@brandialxndra?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+---
 
+## Screen shots
+
+![home](/assets/images/home.jpg?raw=true "home")
+![about-us](/assets/images/about-us.jpg?raw=true "about-us")
+![menu](/assets/images/menu.jpg?raw=true "menu")
+![dish](/assets/images/dish.jpg?raw=true "dish")
 
 ---
 

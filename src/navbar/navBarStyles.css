@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  background-color: #c43c00;
+  color: #fff;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.navbar__tab-container {
+  display: flex;
+  padding-right: 1.5rem;
+}
+
+.navbar__tab-item {
+  border: none;
+  font-size: 0.898rem;
+  margin-right: 1.5rem;
+  height: 3rem;
+  background-color: #c43c00;
+  color: #cfd8dc;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.navbar__tab-item:hover {
+  border-bottom: 1px solid #ff6d00;
+  color: #fff;
+}

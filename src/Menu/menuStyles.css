@@ -1,0 +1,161 @@
+/* Take as an example the modal tutorial in w3schools
+   https://www.w3schools.com/howto/howto_css_modals.asp
+*/
+
+/* #region Modal */
+.modal {
+  position: fixed;
+  z-index: 1;
+  margin-top: 5rem;
+  padding-top: 2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 70%;
+  height: 70%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  overflow-y: scroll;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #c56200;
+  color: #000;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-body__grade {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.modal-body__info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.modal-body__image {
+  max-width: 30%;
+  max-height: 35%;
+  margin-right: 2rem;
+}
+
+/* #endregion Modal */
+
+/* #region Menu Cards */
+.menu-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  background-color: #ff6d00;
+}
+
+.menu__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 20%;
+  max-height: 52%;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.menu__card-image {
+  width: 100%;
+  max-height: 200px;
+}
+
+.menu__card-grade {
+  align-self: flex-end;
+}
+
+.menu__card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0.5px solid lightgray;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  padding: 1rem;
+  padding-top: 0;
+  background-color: #fff;
+}
+
+.menu__card-info > p {
+  display: none;
+}
+
+.menu__card:hover {
+  -webkit-box-shadow: 9px 15px 9px -7px rgba(0, 0, 71, 0.5);
+  -moz-box-shadow: 9px 15px 9px -7px rgba(0, 0, 71, 0.5);
+  box-shadow: 9px 15px 9px -7px rgba(0, 0, 71, 0.9);
+}
+
+/* #endregion Menu Cards */
+
+/* #region Animations */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* #endregion Animations */
