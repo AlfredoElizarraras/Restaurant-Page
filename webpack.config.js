@@ -32,7 +32,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Restaurant page',
-      template: 'src/index.html'
+      template: 'src/index.html',
     }),
   ],
 };
