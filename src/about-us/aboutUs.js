@@ -2,7 +2,7 @@ import './aboutUsStyles.css';
 import aboutUsImageSrc from '../images/about-us.jpg';
 
 const AboutUsPage = (() => {
-  const createAboutUsPageElement = () =>{
+  const createAboutUsPageElement = () => {
     // create returning element and child elements
 
     const aboutUsIdContainer = document.createElement('div');
