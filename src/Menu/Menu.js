@@ -5,131 +5,122 @@ import dish3 from '../images/dish_3.jpg';
 import dish4 from '../images/dish_4.jpg';
 
 const MenuPage = (() => {
-  const createMenuPageMarkUp = () => `
-  <div id="menuId" class="menu-container page d-none">
-  <article id="menuCard1" class="menu__card">
-    <img
-      id="menuCardImage1"
-      class="menu__card-image"
-    />
+  const createMenuCardElement = (number, grade, image) => {
+    // create main container and child elements
+    const menuCardContainer = document.createElement('article');
+    const menuCardImage = document.createElement('img');
+    const menuCardInfo = document.createElement('div');
+    const menuCardHeader = document.createElement('h3');
+    const menuCardDescription = document.createElement('p');
+    const menuCardGrade = document.createElement('span');
 
-    <div class="menu__card-info">
-      <h3 id="menuCardHeader1">Dish 1</h3>
+    // assign Id's
+    menuCardContainer.id = `menuCard${number}`;
+    menuCardImage.id = `menuCardImage${number}`;
+    menuCardHeader.id = `menuCardHeader${number}`;
+    menuCardDescription.id = `menuCardDescription${number}`;
+    menuCardGrade.id = `menuCardGrade${number}`;
 
-      <p id="menuCardDescription1">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quod,
-        repudiandae nisi autem aperiam vitae quaerat voluptatem obcaecati
-        harum facere similique nesciunt reprehenderit mollitia expedita
-        ullam. A tempore alias quasi!
-      </p>
+    // assign classes
+    menuCardContainer.classList.add('menu__card');
+    menuCardImage.classList.add('menu__card-image');
+    menuCardInfo.classList.add('menu__card-info');
+    menuCardGrade.classList.add('menu__card-grade');
 
-      <span id="menuCardGrade1" class="menu__card-grade">
-        4.5 / 5 ⭐
-      </span>
-    </div>
-  </article>
+    // assign values
+    menuCardHeader.innerHTML = `Dish ${number}`;
+    menuCardDescription.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quod, repudiandae nisi autem aperiam vitae quaerat voluptatem obcaecati harum facere similique nesciunt reprehenderit mollitia expedita ullam. A tempore alias quasi!';
+    menuCardGrade.innerHTML = ` ${grade} / 5 ⭐`;
+    menuCardImage.src = image;
 
-  <article id="menuCard2" class="menu__card">
-    <img
-      id="menuCardImage2"
-      class="menu__card-image"
-    />
+    // append to containers
+    menuCardInfo.append(menuCardHeader);
+    menuCardInfo.append(menuCardDescription);
+    menuCardInfo.append(menuCardGrade);
+    menuCardContainer.append(menuCardImage);
+    menuCardContainer.append(menuCardInfo);
 
-    <div class="menu__card-info">
-      <h3 id="menuCardHeader2">Dish 2</h3>
+    return menuCardContainer;
+  };
 
-      <p id="menuCardDescription2">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quod,
-        repudiandae nisi autem aperiam vitae quaerat voluptatem obcaecati
-        harum facere similique nesciunt reprehenderit mollitia expedita
-        ullam. A tempore alias quasi!
-      </p>
+  const createModalElement = () => {
+    // create main element and childs
+    const modalDishInfoContainer = document.createElement('div');
+    const modalContent = document.createElement('div');
+    const modalContentHeader = document.createElement('div');
+    const modalContentBody = document.createElement('div');
+    const modalContentHeaderCloseButton = document.createElement('span');
+    const modalContentHeaderTitle = document.createElement('h2');
+    const modalContentBodyImage = document.createElement('img');
+    const modalContentBodyInfo = document.createElement('div');
+    const modalContentBodyInfoDescription = document.createElement('p');
+    const modalContentBodyInfoGrade = document.createElement('span');
 
-      <span id="menuCardGrade2" class="menu__card-grade">
-        2.5 / 5 ⭐
-      </span>
-    </div>
-  </article>
+    // assign Id's
+    modalDishInfoContainer.id = 'modalDishInfo';
+    modalContentHeaderCloseButton.id = 'btn-close';
+    modalContentHeaderTitle.id = 'menuModalHeader';
+    modalContentBodyImage.id = 'menuModalImage';
+    modalContentBodyInfoDescription.id = 'menuModalDescription';
+    modalContentBodyInfoGrade.id = 'menuModalGrade';
 
-  <article id="menuCard3" class="menu__card">
-    <img
-      id="menuCardImage3"
-      class="menu__card-image"
-    />
+    // assign classes
+    modalDishInfoContainer.classList.add('modal');
+    modalDishInfoContainer.classList.add('d-none');
+    modalContent.classList.add('modal-content');
+    modalContentHeader.classList.add('modal-header');
+    modalContentHeaderCloseButton.classList.add('close');
+    modalContentBody.classList.add('modal-body');
+    modalContentBodyImage.classList.add('modal-body__image');
+    modalContentBodyInfo.classList.add('modal-body__info');
+    modalContentBodyInfoGrade.classList.add('modal-body__grade');
 
-    <div class="menu__card-info">
-      <h3 id="menuCardHeader3">Dish 3</h3>
+    // assign values
+    modalContentHeaderCloseButton.innerHTML = '&times';
 
-      <p id="menuCardDescription3">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quod,
-        repudiandae nisi autem aperiam vitae quaerat voluptatem obcaecati
-        harum facere similique nesciunt reprehenderit mollitia expedita
-        ullam. A tempore alias quasi!
-      </p>
+    // append to containers
+    modalContentHeader.append(modalContentHeaderCloseButton);
+    modalContentHeader.append(modalContentHeaderTitle);
+    modalContentBody.append(modalContentBodyImage);
+    modalContentBodyInfo.append(modalContentBodyInfoDescription);
+    modalContentBodyInfo.append(modalContentBodyInfoGrade);
+    modalContentBody.append(modalContentBodyInfo);
+    modalContent.append(modalContentHeader);
+    modalContent.append(modalContentBody);
+    modalDishInfoContainer.append(modalContent);
 
-      <span
-        id="menuCardGrade3"
-        class="menu__card-grade"
-        aria-valuetext="4.5"
-      >
-        4.0 / 5 ⭐
-      </span>
-    </div>
-  </article>
+    return modalDishInfoContainer;
+  };
 
-  <article id="menuCard4" class="menu__card">
-  <img
-    id="menuCardImage4"
-    class="menu__card-image"
-  />
+  const createMenuPageElement = () => {
+    // create main container and child elements.
+    const menuIdContainer = document.createElement('div');
+    const card1 = createMenuCardElement(1, 4.5, dish1);
+    const card2 = createMenuCardElement(2, 4.2, dish2);
+    const card3 = createMenuCardElement(3, 4.6, dish3);
+    const card4 = createMenuCardElement(4, 3.5, dish4);
 
-  <div class="menu__card-info">
-    <h3 id="menuCardHeader4">Dish 4</h3>
+    // assign Id's
+    menuIdContainer.id = 'menuId';
 
-    <p id="menuCardDescription4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quod,
-      repudiandae nisi autem aperiam vitae quaerat voluptatem obcaecati
-      harum facere similique nesciunt reprehenderit mollitia expedita
-      ullam. A tempore alias quasi!
-    </p>
+    // assign classes
+    menuIdContainer.classList.add('menu-container');
+    menuIdContainer.classList.add('page');
+    menuIdContainer.classList.add('d-none');
 
-    <span id="menuCardGrade4" class="menu__card-grade">
-      3.5 / 5 ⭐
-    </span>
-  </div>
-</article>
-</div>
+    // append to containers
+    menuIdContainer.append(card1);
+    menuIdContainer.append(card2);
+    menuIdContainer.append(card3);
+    menuIdContainer.append(card4);
 
-
-  <div id="modalDishInfo" class="modal d-none">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span id="btn-close" class="close">&times;</span>
-      <h2 id="menuModalHeader">Modal Header</h2>
-    </div>
-    <div class="modal-body">
-      <img id="menuModalImage" class="modal-body__image" />
-      <div class="modal-body__info">
-        <p id="menuModalDescription">Modal description</p>
-        <span id="menuModalGrade" class="modal-body__grade"
-          >Modal grade</span
-        >
-      </div>
-    </div>
-  </div>
-</div>
-  `;
-
-  const addImages = () => {
-    document.getElementById('menuCardImage1').src = dish1;
-    document.getElementById('menuCardImage2').src = dish2;
-    document.getElementById('menuCardImage3').src = dish3;
-    document.getElementById('menuCardImage4').src = dish4;
+    return menuIdContainer;
   };
 
   const renderMenuPage = (parent) => {
-    document.getElementById(parent).innerHTML += createMenuPageMarkUp();
-    addImages();
+    const parentElement = document.getElementById(parent);
+    parentElement.append(createMenuPageElement());
+    parentElement.append(createModalElement());
   };
 
   return {
