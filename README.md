@@ -32,7 +32,7 @@ To get a local copy up and running follow these simple example steps
 - Change directory to Restaurant-Page folder.
 - npm install
 
-## Authors
+## Author
 
 👤 **Oscar Alfredo Gómez Elizarrarás**
 

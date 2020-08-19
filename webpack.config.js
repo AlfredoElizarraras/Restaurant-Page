@@ -6,6 +6,10 @@ module.exports = {
   entry: {
     app: './src/index.js',
   },
+  output: {
+    filename: '[name].main.js',
+    path: path.join(__dirname, 'dist'),
+  },
   module: {
     rules: [
       {
@@ -28,10 +32,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Restaurant page',
+      template: 'src/index.html'
     }),
   ],
-  output: {
-    filename: '[name].main.js',
-    path: path.join(__dirname, 'dist'),
-  },
 };

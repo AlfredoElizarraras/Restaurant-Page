@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "watch": "webpack --watch"
+    "go": "webpack-dev-server --host 0.0.0.0 --port 8080",
+    "stylelint": "npx stylelint ./src/css/*.css",
+    "eslint": "npx eslint ./src/*.js"
   },
   "repository": {
     "type": "git",
